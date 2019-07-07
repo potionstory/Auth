@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const port = process.env.PORT || 8080;
 
 module.exports = {
@@ -17,20 +18,9 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              camelCase: true,
-              sourceMap: true
-            }
-          }
-        ]
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: /node_modules/,
       }
     ]
   },
@@ -39,12 +29,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
-    })
+    }),
   ],
   devServer: {
     host: 'localhost',
     port: port,
     open: true,
     historyApiFallback: true,
+  },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"],
   }
 };
