@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../pages/Home';
+import AuthPage from '../pages/AuthPage';
 
 const App = () => (
   <Switch>
-    <Route exact path="/" component={Home} />
+    <Route exact path="/" component={AuthPage} />
   </Switch>
 );
 
