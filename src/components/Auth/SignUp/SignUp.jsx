@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faGooglePlusG, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import './SignUp.scss';
 
 const SignUp = () => (
@@ -7,9 +9,9 @@ const SignUp = () => (
       <form action="#">
         <h1>Create Account</h1>
         <div className="social-container">
-          <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-          <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-          <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#" className="social"><FontAwesomeIcon icon={faFacebookF} /></a>
+          <a href="#" className="social"><FontAwesomeIcon icon={faGooglePlusG} /></a>
+          <a href="#" className="social"><FontAwesomeIcon icon={faLinkedinIn} /></a>
         </div>
         <span>or use our email for registration</span>
         <input type="text" placeholder="Name" />
