@@ -1,0 +1,31 @@
+{
+  "name": "auth_backend",
+  "version": "0.0.1",
+  "description": "auth backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potionstory/Auth.git"
+  },
+  "keywords": [
+    "Auth"
+  ],
+  "author": "potionstory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potionstory/Auth/issues"
+  },
+  "homepage": "https://github.com/potionstory/Auth#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
